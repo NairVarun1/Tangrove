@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery || A collection of our cherishmed moments !!</title>
+    <link rel="stylesheet" href="/css/gallery.css"/>
+  </head>
+  <body>
+    <header>
+        <a href="index.html">
+        <img src="/images/TANGROVEwhite.png" alt="logo" style="width: 250px;">
+        </a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">HOME</a>
+                <a href="party.html">EVENTS</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="about.html">ABOUT</a>
+                <a href="contact1.html">CONTACT US</a>
+            </div>
+        </div>
+    </header>
+
+    <section>
+      <ul>
+        <li class="list active" data-filter="all">All</li>
+        <li class="list" data-filter="property">Property</li>
+        <li class="list" data-filter="rooms">Rooms</li>
+        <li class="list" data-filter="events">Events</li>
+        <li class="list" data-filter="nature">Nature</li>
+      </ul>
+      <div class="product">
+        <div class="itemBox" data-item="property">
+          <img src="images/property1.jpg" alt="property" />
+        </div>
+        <div class="itemBox" data-item="rooms">
+          <img src="images/rooms1.jpg" alt="rooms" />
+        </div>
+        <div class="itemBox" data-item="events">
+          <img src="images/events1.jpg" alt="events" />
+        </div>
+        <div class="itemBox" data-item="nature">
+          <img src="images/nature1.jpg" alt="nature" />
+        </div>
+
+        <div class="itemBox" data-item="property">
+          <img src="images/property2.jpg" alt="property" />
+        </div>
+        <div class="itemBox" data-item="rooms">
+          <img src="images/rooms2.jpg" alt="rooms" />
+        </div>
+        <div class="itemBox" data-item="events">
+          <img src="images/events2.jpg" alt="events" />
+        </div>
+        <div class="itemBox" data-item="nature">
+          <img src="images/nature2.jpg" alt="nature" />
+        </div>
+
+        <div class="itemBox" data-item="property">
+          <img src="images/property3.jpg" alt="property" />
+        </div>
+        <div class="itemBox" data-item="rooms">
+          <img src="images/rooms3.jpg" alt="rooms" />
+        </div>
+        <div class="itemBox" data-item="events">
+          <img src="images/events3.jpg" alt="events" />
+        </div>
+        <div class="itemBox" data-item="nature">
+          <img src="images/nature3.jpg" alt="nature" />
+        </div>
+
+        <div class="itemBox" data-item="property">
+          <img src="images/property4.jpg" alt="property" />
+        </div>
+        <div class="itemBox" data-item="events">
+          <img src="images/events4.jpg" alt="events" />
+        </div>
+        <div class="itemBox" data-item="nature">
+          <img src="images/nature4.jpg" alt="nature" />
+        </div>
+
+        <div class="itemBox" data-item="property">
+          <img src="images/property5.jpg" alt="property" />
+        </div>
+      </div>
+    </section>
+
+    <div class="whatsapp-container">
+        <a href="https://api.whatsapp.com/send?phone=9663157655" target="_blank">
+        <img class="whatsapp-logo" src="/images/whatsapp.png" alt="WhatsApp Logo">
+        </a>
+        </div>
+
+        <div class="container-3">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                  <li class="nav-item"><a href="trial.html" class="nav-link px-2">Home</a></li>
+                  <li class="nav-item"><a href="party.html" class="nav-link px-2">Parties & Events</a></li>
+                  <li class="nav-item"><a href="accomodation.html" class="nav-link px-2">Accomodation</a></li>
+                  <li class="nav-item"><a href="about.html" class="nav-link px-2">About</a></li>
+                  <li class="nav-item"><a href="contact1.html" class="nav-link px-2">Contact Us</a></li>
+                </ul>
+                <p class="text-center "style="color:#555;text-align:center;margin-top: 20px;">© 2023 The Tamarindtree</p>
+              </footer>
+            </div>
+
+    <script>
+      let list = document.querySelectorAll('.list');
+      let itemBox = document.querySelectorAll('.itemBox');
+
+      for (let i = 0; i < list.length; i++) {
+        list[i].addEventListener('click', function () {
+          for (let j = 0; j < list.length; j++) {
+            list[j].classList.remove('active');
+          }
+          this.classList.add('active');
+
+          let dataFilter = this.getAttribute('data-filter');
+
+          for (let k = 0; k < itemBox.length; k++) {
+            itemBox[k].classList.remove('active');
+            itemBox[k].classList.add('hide');
+
+            if (
+              itemBox[k].getAttribute('data-item') == dataFilter ||
+              dataFilter == 'all'
+            ) {
+              itemBox[k].classList.remove('hide');
+              itemBox[k].classList.add('active');
+            }
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
