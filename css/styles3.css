@@ -1,0 +1,281 @@
+/*About PAGE STYLING*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+header{
+    background-color: #Bc6c25;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s ease;
+    padding: 40px 200px;
+}
+header .navigation{
+    z-index: 1000;
+    position: relative;
+}
+header .navigation .navigation-items a{
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a:before{
+    position: absolute;
+    background: #fff;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    content: '';
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a:hover:before{
+    width: 100%;
+}
+
+@media(max-width:1040px){
+    header{
+        padding: 20px 30px;
+    }
+    .home .media-icons{
+        right: 15px;
+    }
+    header .navigation {
+        display: none;
+    }
+    
+    header .navigation.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        width: 600px;
+        max-width: 90%;
+        margin: 20px;
+        padding: 40px;
+        flex-direction: column;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1 1 1 /20%);
+        z-index: 1001;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    
+    header .navigation .navigation-items a {
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px;
+    }
+    
+    header .navigation .navigation-items a:before {
+        background: #222;
+        height: 5px;
+    }
+    
+    header .navigation.active .navigation-items{
+        background: #fff;
+        width: 600px;
+        max-width: 600px;
+        margin:20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1 1 1 /20%);
+    }
+    .menu-btn {
+        background: url(/images/menu.png) no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    
+    .menu-btn.active {
+        z-index: 1003;
+        background: url(/images/close.png) no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 40px auto;
+    flex-direction: column;
+    text-align: justify;
+}
+.container h1{
+    font-family: Cormorant Garamond;
+    margin-bottom: 20px;
+}
+
+.container h3{
+    font-family: Cormorant Garamond;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+.container p{
+    line-height: 180%;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    text-align: justify;
+}
+.spaces{
+    width: 70%;
+    justify-content: left;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+}
+
+.spaces h1{
+    font-size: 2.5em;
+    font-family: Cormorant Garamond;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.spaces-content h3{
+    font-weight: bolder;
+    margin-bottom: 15px;
+    font-family: Cormorant Garamond;
+}
+.spaces-content{
+    margin-top: 25px;
+}
+.spaces-content p{
+    color: #777;
+}
+
+.organic{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 40px auto;
+   flex-direction: column;
+   width: 70%;
+   margin-top: 80px;
+}
+.organic h1{
+    font-size: 2rem;
+    font-family: Cormorant Garamond;
+    margin-bottom: 40px;
+}
+.organic p{
+    text-align: justify;
+    letter-spacing: 0.5px;
+    line-height: 180%;
+    font-size: 15px;
+}
+.organic-btn{
+    width: 200px;
+    height: 50px;
+    font-family: Cormorant Garamond;
+    font-size: 2rem;
+    border: 2px solid black;
+    background: transparent;
+    transition: all 0.2s ease;
+}
+.organic-btn:hover{
+    background: black;
+    color: white;
+}
+.learn-more{
+    margin-top: 30px;
+}
+.learn-more h3{
+    font-family: Cormorant Garamond;
+}
+.learn-more ul li{
+    color: #777;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.mission-text{
+    display: none;
+    transition: display 0.3s ease-in;
+}
+.visible{
+    display: block;
+}
+
+
+/*Whatsapp Logo*/
+.whatsapp-container{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.whatsapp-logo{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/*Footer styling*/
+.container-2 {
+    font-family: 'Oswald',sans;
+    background-color: whitesmoke;
+    color: black;
+    padding: 20px 0; 
+  }
+  
+  /* Style for the footer navigation links */
+  .nav.justify-content-center {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-item {
+    margin-right: 20px; 
+  }
+  
+  .nav-link {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .nav-link:hover{
+    border-bottom: 2px solid black;
+    transition: 1s ease-in;
+  }
+  
+  /* Style for the copyright notice */
+  .text-body-secondary {
+    margin-top: 20px;
+    text-align: center;
+  }
