@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us || The TANGROVE</title>
+    <link rel="stylesheet" href="css/styles2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bebas+Neue&family=Itim&family=Kablammo&family=Libre+Baskerville&family=Nosifer&family=Oswald:wght@600&family=Poppins&family=Rock+Salt&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dc479fd69a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+        <img src="images/TANGROVEwhite.png" alt="logo" style="width: 250px;">
+        </a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">HOME</a>
+                <a href="party.html">EVENTS</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="about.html">ABOUT</a>
+                <a href="contact1.html">CONTACT US</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="main-image">
+        <div class="hero-image">
+            <img src="images/phone.jpg">
+            </div>
+    </section>
+
+    <div class="content">
+        <h3>GET IN TOUCH FOR</h2>
+        <h1>Bookings and Enquiries</h1>
+        </div>
+
+  <h1 style="color: black;text-align: center;margin-top:40px ; margin-bottom: -60px;font-family: Cormorant Garamond;">We'd love to hear from you !</h1>
+    
+    <section class="contact">
+        <form action="#">
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off">
+                    <div class="error-txt">Full Name can't be blank</div>
+                </div>
+
+                <div class="input-field field">
+                    <input type="email" placeholder="Email" id="email" class="item" autocomplete="off">
+                    <div class="error-txt">Email Address can't be blank</div>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Phone Number" id="phone" class="item" autocomplete="off">
+                    <div class="error-txt">Phone Number can't be blank</div>
+                </div>
+
+                <div class="input-field field">
+                    <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off">
+                    <div class="error-txt">Subject can't be blank</div>
+                </div>
+            </div>
+
+            <div class="textarea-field field">
+                <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message Here" class="item" autocomplete="off"></textarea>
+                <div class="error-txt">Message can't be blank</div>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <section class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3895.3434226748027!2d77.67656377472576!3d12.493381487779747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae8949c0bd2697%3A0xced0ed909f62a50d!2sHilltop%20Farm%20retreat!5e0!3m2!1sen!2sin!4v1707032738578!5m2!1sen!2sin" width="600" height="450" style="border: 2px solid black;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section> 
+
+    <div class="whatsapp-container">
+        <a href="https://api.whatsapp.com/send?phone=9663157655" target="_blank">
+        <img class="whatsapp-logo" src="images/whatsapp.png" alt="WhatsApp Logo">
+        </a>
+        </div>
+        
+        
+        
+            <div class="container-2">
+              <footer class="py-3 my-4">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                  <li class="nav-item"><a href="trial.html" class="nav-link px-2">Home</a></li>
+                  <li class="nav-item"><a href="party.html" class="nav-link px-2">Events</a></li>
+                  <li class="nav-item"><a href="gallery.html" class="nav-link px-2">Gallery</a></li>
+                  <li class="nav-item"><a href="about.html" class="nav-link px-2">About</a></li>
+                  <li class="nav-item"><a href="contact1.html" class="nav-link px-2">Contact Us</a></li>
+                </ul>
+                <p class="text-center "style="color:#fff;text-align:center;margin-top: 20px;">© 2023 The TANGROVE</p>
+              </footer>
+            </div> 
+
+            
+
+    
+    
+
+
+    <script>
+
+        const form= document.querySelector('form');
+        const fullName= document.getElementById("name");
+        const email= document.getElementById("email");
+        const phone= document.getElementById("phone");
+        const subject= document.getElementById("subject");
+        const mess= document.getElementById("message");
+
+        function sendEmail(){
+            const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br> Phone Number: ${phone.value}<br> Message: ${mess.value}`;
+            
+            Email.send({
+            SecureToken : "58ecc248-19e1-45c8-83f6-9f0afdc288e7",
+            To : 'thetamarindtree7@gmail.com',
+            From : "thetamarindtree7@gmail.com",
+            Subject : subject.value,
+            Body : bodyMessage
+            }).then(
+                message => {
+                    if (message == "OK") {
+                        Swal.fire({
+                        title: "Success!",
+                        text: "Message Sent Successfully!",
+                        icon: "success"
+                        });
+                    }
+                }
+            );
+        }
+
+        function checkInputs(){
+            const items= document.querySelectorAll(".item");
+
+            for(const item of items){
+                if(item.value== ""){
+                    item.classList.add("error");
+                    item.parentElement.classList.add("error");
+                }
+
+                item.addEventListener("keyup", () => {
+                    if(item.value != ""){
+                        item.classList.remove("error");
+                        item.parentElement.classList.remove("error");
+                    }
+                    else{
+                        item.classList.add("error");
+                        item.parentElement.classList.add("error");
+                    }
+                })
+            }
+        }
+
+        form.addEventListener("submit", (e) =>{
+            e.preventDefault();
+            checkInputs();
+
+            if(!fullName.classList.contains("error") && !email.classList.contains("error") && !phone.classList.contains("error") && !subject.classList.contains("error") && !mess.classList.contains("error")){
+                sendEmail();
+
+                form.reset();
+                return false;
+            }
+        
+        });
+
+    
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+        });
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+</body>
+</html>
+
+        
